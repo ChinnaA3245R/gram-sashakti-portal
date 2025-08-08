@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
+import { Users, BookOpen, Lightbulb, Heart } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -13,20 +14,20 @@ const Index = () => {
       <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Village Panchayat Awareness Portal
+            Empowering Villages Through Panchayat Awareness
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Empowering villagers with knowledge about local governance and government schemes
+            A community service initiative by Narasaraopeta Engineering College students to bridge the gap between local governance and rural citizens
           </p>
           <div className="space-x-4">
-            <Link to="/services">
+            <Link to="/panchayat-101">
               <Button size="lg" variant="secondary">
-                Explore Services
+                Learn About Your Panchayat
               </Button>
             </Link>
-            <Link to="/auth">
+            <Link to="/about">
               <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                Register Now
+                About Our Initiative
               </Button>
             </Link>
           </div>

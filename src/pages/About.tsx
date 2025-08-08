@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Calendar, Target, Eye, Users, MapPin } from 'lucide-react';
 
 const About = () => {
   return (
@@ -9,123 +10,144 @@ const About = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">About Village Panchayat</h1>
+          <h1 className="text-4xl font-bold mb-4">About Our Project</h1>
           <p className="text-xl text-muted-foreground">
-            Understanding the foundation of rural governance in India
+            A community service initiative bridging the gap between governance and citizens
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        {/* Project Introduction */}
+        <div className="mb-16">
           <Card>
             <CardHeader>
-              <CardTitle>What is a Village Panchayat?</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-6 h-6 text-primary" />
+                Community Service Initiative
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                A Village Panchayat is the basic unit of local self-governance in rural India. 
-                It is a constitutional body that operates at the village level and is responsible 
-                for the planning and implementation of development programs and schemes.
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                This project represents a dedicated effort by students of <strong>Narasaraopeta Engineering College</strong> to create meaningful change in rural communities. Through direct engagement with villagers in <strong>Yerraguntlapadu village, Phirangipuram Mandal, Guntur District</strong>, we aim to enhance understanding of local governance and strengthen the bond between citizens and their Panchayat representatives.
               </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Constitutional Foundation</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                The 73rd Constitutional Amendment Act of 1992 gave constitutional status to 
-                Panchayati Raj Institutions, making them the third tier of governance after 
-                the Union and State governments.
+              <p className="text-muted-foreground leading-relaxed">
+                Our initiative focuses on education, awareness, and empowerment, recognizing that informed citizens are the foundation of effective democracy at the grassroots level.
               </p>
             </CardContent>
           </Card>
         </div>
 
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Key Functions of Village Panchayat</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Target className="w-6 h-6 text-primary" />
+                Our Mission
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                To bridge the knowledge gap between rural citizens and their local governance systems by providing comprehensive education about Panchayat functions, citizen rights, and available services, thereby promoting active community participation in democratic processes.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Eye className="w-6 h-6 text-primary" />
+                Our Vision
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                To create empowered rural communities where every citizen understands their rights, actively participates in local governance, and works collaboratively with Panchayat institutions to achieve sustainable development and improved quality of life.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Project Location */}
+        <div className="mb-16">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MapPin className="w-6 h-6 text-primary" />
+                Project Location
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="font-semibold mb-2">Village</h4>
+                  <p className="text-muted-foreground">Yerraguntlapadu</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Mandal</h4>
+                  <p className="text-muted-foreground">Phirangipuram</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">District</h4>
+                  <p className="text-muted-foreground">Guntur District, Andhra Pradesh</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Timeline */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">8-Week Project Timeline</h2>
+          <div className="grid gap-6">
             {[
               {
-                title: "Water Management",
-                description: "Ensuring clean water supply and sanitation facilities"
+                week: "Week 1-2",
+                title: "Community Assessment",
+                description: "Initial surveys and interviews to understand current awareness levels and identify key challenges."
               },
               {
-                title: "Road Development",
-                description: "Construction and maintenance of village roads"
+                week: "Week 3-4",
+                title: "Educational Material Development",
+                description: "Creation of informative content, brochures, and presentation materials in local language."
               },
               {
-                title: "Education",
-                description: "Supporting primary education and literacy programs"
+                week: "Week 5-6",
+                title: "Community Workshops",
+                description: "Interactive sessions with villagers explaining Panchayat functions, rights, and services."
               },
               {
-                title: "Healthcare",
-                description: "Primary healthcare services and health awareness"
-              },
-              {
-                title: "Agriculture",
-                description: "Supporting agricultural development and farmers"
-              },
-              {
-                title: "Women Empowerment",
-                description: "Programs for women's social and economic empowerment"
+                week: "Week 7-8",
+                title: "Impact Assessment & Follow-up",
+                description: "Evaluation of learning outcomes and establishment of long-term engagement strategies."
               }
-            ].map((function_, index) => (
+            ].map((phase, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <CardTitle className="text-lg">{function_.title}</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-primary" />
+                    {phase.week}: {phase.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-sm">
-                    {function_.description}
-                  </p>
+                  <p className="text-muted-foreground">{phase.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        <div>
-          <h2 className="text-3xl font-bold mb-6">Structure of Panchayati Raj</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Gram Panchayat</CardTitle>
-                <CardDescription>Village Level</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  The lowest tier, directly dealing with village-level issues and development.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Panchayat Samiti</CardTitle>
-                <CardDescription>Block Level</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  The intermediate tier, coordinating between village and district levels.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Zilla Panchayat</CardTitle>
-                <CardDescription>District Level</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  The highest tier, responsible for district-level planning and coordination.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        {/* College Involvement */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Narasaraopeta Engineering College</CardTitle>
+            <CardDescription>Fostering Social Responsibility Through Education</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">
+              This initiative is part of our college's commitment to social service and community development. Our students have dedicated their time and skills to create meaningful impact in rural areas, developing leadership qualities, practical problem-solving skills, and a deeper understanding of social responsibility. The project aligns with our institution's values of using technical education for societal benefit.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

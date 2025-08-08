@@ -7,9 +7,12 @@ import { AuthProvider } from "./contexts/AuthContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import Dashboard from "./pages/Dashboard";
+import Panchayat101 from "./pages/Panchayat101";
+import Problems from "./pages/Problems";
+import Activities from "./pages/Activities";
+import Impact from "./pages/Impact";
+import ActionPlan from "./pages/ActionPlan";
+import GetInvolved from "./pages/GetInvolved";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,9 +28,12 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/panchayat-101" element={<Panchayat101 />} />
+            <Route path="/problems" element={<Problems />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/action-plan" element={<ActionPlan />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

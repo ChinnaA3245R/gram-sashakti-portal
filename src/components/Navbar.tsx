@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-xl font-bold">
-              Village Panchayat Portal
+              Panchayat Awareness
             </Link>
           </div>
           
@@ -27,13 +27,25 @@ const Navbar = () => {
               Home
             </Link>
             <Link to="/about" className="hover:text-primary-foreground/80">
-              About
+              About Project
             </Link>
-            <Link to="/services" className="hover:text-primary-foreground/80">
-              Services
+            <Link to="/panchayat-101" className="hover:text-primary-foreground/80">
+              Panchayat 101
             </Link>
-            <Link to="/contact" className="hover:text-primary-foreground/80">
-              Contact
+            <Link to="/problems" className="hover:text-primary-foreground/80">
+              Problems
+            </Link>
+            <Link to="/activities" className="hover:text-primary-foreground/80">
+              Activities
+            </Link>
+            <Link to="/impact" className="hover:text-primary-foreground/80">
+              Impact
+            </Link>
+            <Link to="/action-plan" className="hover:text-primary-foreground/80">
+              Action Plan
+            </Link>
+            <Link to="/get-involved" className="hover:text-primary-foreground/80">
+              Get Involved
             </Link>
             
             {user ? (
